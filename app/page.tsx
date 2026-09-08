@@ -1,69 +1,186 @@
-import Image from "next/image";
+"use client";
+
+import React, { useState } from "react";
+import { TopBar } from "@/components/Navbar/TopBar";
+import { MainHeader } from "@/components/Navbar/MainHeader";
+import { Navigation } from "@/components/Navbar/Navigation";
+import { HeroCarousel } from "@/components/Hero/HeroCarousel";
+import { StatsStrip } from "@/components/Stats/StatsStrip";
+import { AboutSection } from "@/components/About/AboutSection";
+import { AcademicPrograms } from "@/components/Academics/AcademicPrograms";
+import { NewsEventsSection } from "@/components/NewsEvents/NewsEventsSection";
+import { QuickServicesBar } from "@/components/QuickServices/QuickServicesBar";
+import { LeadershipSection } from "@/components/Leadership/LeadershipSection";
+import { CampusLifeSection } from "@/components/CampusLife/CampusLifeSection";
+import { Footer } from "@/components/Footer/Footer";
+
+// Modals
+import { StudentLoginModal } from "@/components/Modals/StudentLoginModal";
+import { SearchModal } from "@/components/Modals/SearchModal";
+import { VideoModal } from "@/components/Modals/VideoModal";
+import { ProgramDetailModal } from "@/components/Modals/ProgramDetailModal";
+import { NoticeDetailModal } from "@/components/Modals/NoticeDetailModal";
+import { AdmissionsModal } from "@/components/Modals/AdmissionsModal";
+
+import {
+  ProgramStream,
+  AnnouncementItem,
+  EventItem,
+  academicProgramsData,
+} from "@/data/collegeData";
 
 export default function Home() {
+  // Modal states
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isAdmissionsOpen, setIsAdmissionsOpen] = useState(false);
+  const [isProgramModalOpen, setIsProgramModalOpen] = useState(false);
+  const [selectedStream, setSelectedStream] = useState<ProgramStream | null>(null);
+
+  const [isNoticeModalOpen, setIsNoticeModalOpen] = useState(false);
+  const [selectedNotice, setSelectedNotice] = useState<AnnouncementItem | null>(null);
+  const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
+
+  // Handlers
+  const handleSelectStream = (stream: ProgramStream) => {
+    setSelectedStream(stream);
+    setIsProgramModalOpen(true);
+  };
+
+  const handleViewAllPrograms = () => {
+    setSelectedStream(academicProgramsData[0]);
+    setIsProgramModalOpen(true);
+  };
+
+  const handleSelectNotice = (notice: AnnouncementItem) => {
+    setSelectedNotice(notice);
+    setSelectedEvent(null);
+    setIsNoticeModalOpen(true);
+  };
+
+  const handleSelectEvent = (event: EventItem) => {
+    setSelectedEvent(event);
+    setSelectedNotice(null);
+    setIsNoticeModalOpen(true);
+  };
+
+  const handleServiceClick = (serviceId: string) => {
+    if (serviceId === "exam") {
+      setIsLoginOpen(true);
+    } else if (serviceId === "sch") {
+      setIsAdmissionsOpen(true);
+    } else if (serviceId === "lib") {
+      // scroll to campus life
+      const el = document.getElementById("campus-life");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="min-h-screen flex flex-col bg-white text-slate-800">
+      {/* 1. Top Bar */}
+      <TopBar
+        onOpenSearch={() => setIsSearchOpen(true)}
+        onOpenLogin={() => setIsLoginOpen(true)}
+      />
+
+      {/* 2. Main College Branding Header */}
+      <MainHeader />
+
+      {/* 3. Sticky Navigation Bar with Dropdowns */}
+      <Navigation
+        onOpenAdmissions={() => setIsAdmissionsOpen(true)}
+        onOpenLogin={() => setIsLoginOpen(true)}
+      />
+
+      {/* 4. Hero Carousel (A Legacy of Learning Since 1963 - Empowering Generations) */}
+      <HeroCarousel
+        onAboutClick={() => {
+          const el = document.getElementById("about");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }}
+        onExplorePrograms={handleViewAllPrograms}
+      />
+
+      {/* 5. Key Statistics Strip */}
+      <StatsStrip />
+
+      {/* 6. About Section (About RJC + Vision, Mission, Values + Life at RJC Video Card) */}
+      <AboutSection
+        onOpenVideo={() => setIsVideoOpen(true)}
+        onKnowMore={() => {
+          const el = document.getElementById("leadership");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }}
+      />
+
+      {/* 7. Academic Programs (Arts, Science, Commerce, Self-Financing Courses) */}
+      <AcademicPrograms
+        onSelectStream={handleSelectStream}
+        onViewAllPrograms={handleViewAllPrograms}
+      />
+
+      {/* 8. Announcements, Events & Admissions CTA */}
+      <NewsEventsSection
+        onSelectNotice={handleSelectNotice}
+        onSelectEvent={handleSelectEvent}
+        onOpenAdmissions={() => setIsAdmissionsOpen(true)}
+      />
+
+      {/* 9. Quick Services Ribbon */}
+      <QuickServicesBar onServiceClick={handleServiceClick} />
+
+      {/* 10. Leadership & Governance (Director & Principal) */}
+      <LeadershipSection />
+
+      {/* 11. Campus Life & Student Activities (NCC, NSS, Cultural Fest, Library) */}
+      <CampusLifeSection />
+
+      {/* 12. Rich Footer */}
+      <Footer />
+
+      {/* Interactive Modals */}
+      <StudentLoginModal
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+      />
+
+      <SearchModal
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+        onSelectProgram={(streamId) => {
+          const matched = academicProgramsData.find((s) => s.id === streamId);
+          if (matched) {
+            setSelectedStream(matched);
+            setIsProgramModalOpen(true);
+          }
+        }}
+      />
+
+      <VideoModal
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+      />
+
+      <ProgramDetailModal
+        isOpen={isProgramModalOpen}
+        onClose={() => setIsProgramModalOpen(false)}
+        stream={selectedStream}
+        onOpenAdmissions={() => setIsAdmissionsOpen(true)}
+      />
+
+      <NoticeDetailModal
+        isOpen={isNoticeModalOpen}
+        onClose={() => setIsNoticeModalOpen(false)}
+        notice={selectedNotice}
+        event={selectedEvent}
+      />
+
+      <AdmissionsModal
+        isOpen={isAdmissionsOpen}
+        onClose={() => setIsAdmissionsOpen(false)}
+      />
+    </main>
   );
 }
