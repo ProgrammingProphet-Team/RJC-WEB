@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import { TopBar } from "@/components/Navbar/TopBar";
 import { MainHeader } from "@/components/Navbar/MainHeader";
 import { Navigation } from "@/components/Navbar/Navigation";
-import { HeroCarousel } from "@/components/Hero/HeroCarousel";
+import { HeroVideo } from "@/components/Hero/HeroVideo";
 import { StatsStrip } from "@/components/Stats/StatsStrip";
+import { WelcomeSection } from "@/components/Welcome/WelcomeSection";
 import { AboutSection } from "@/components/About/AboutSection";
 import { AcademicPrograms } from "@/components/Academics/AcademicPrograms";
 import { NewsEventsSection } from "@/components/NewsEvents/NewsEventsSection";
@@ -94,8 +95,8 @@ export default function Home() {
         onOpenLogin={() => setIsLoginOpen(true)}
       />
 
-      {/* 4. Hero Carousel (A Legacy of Learning Since 1963 - Empowering Generations) */}
-      <HeroCarousel
+      {/* 4. Hero Video Background (A Legacy of Learning Since 1963 - Empowering Generations) */}
+      <HeroVideo
         onAboutClick={() => {
           const el = document.getElementById("about");
           if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -106,36 +107,51 @@ export default function Home() {
       {/* 5. Key Statistics Strip */}
       {/* <StatsStrip /> */}
 
+       <NewsEventsSection
+        onSelectNotice={handleSelectNotice}
+        onSelectEvent={handleSelectEvent}
+        onOpenAdmissions={() => setIsAdmissionsOpen(true)}
+      />
+      <QuickServicesBar onServiceClick={handleServiceClick} />
+
+      {/* Welcome & NAAC Section */}
+      <WelcomeSection />
+
       {/* 6. About Section (About RJC + Vision, Mission, Values + Life at RJC Video Card) */}
-      <AboutSection
+      {/* <AboutSection
         onOpenVideo={() => setIsVideoOpen(true)}
         onKnowMore={() => {
           const el = document.getElementById("leadership");
           if (el) el.scrollIntoView({ behavior: "smooth" });
         }}
-      />
+      /> */}
+
+     <CampusLifeSection />
+           
+
 
       {/* 7. Academic Programs (Arts, Science, Commerce, Self-Financing Courses) */}
       <AcademicPrograms
         onSelectStream={handleSelectStream}
         onViewAllPrograms={handleViewAllPrograms}
       />
+      
 
       {/* 8. Announcements, Events & Admissions CTA */}
-      <NewsEventsSection
+      {/* <NewsEventsSection
         onSelectNotice={handleSelectNotice}
         onSelectEvent={handleSelectEvent}
         onOpenAdmissions={() => setIsAdmissionsOpen(true)}
-      />
+      /> */}
 
       {/* 9. Quick Services Ribbon */}
-      <QuickServicesBar onServiceClick={handleServiceClick} />
+      {/* <QuickServicesBar onServiceClick={handleServiceClick} /> */}
 
       {/* 10. Leadership & Governance (Director & Principal) */}
       <LeadershipSection />
 
       {/* 11. Campus Life & Student Activities (NCC, NSS, Cultural Fest, Library) */}
-      <CampusLifeSection />
+      {/* <CampusLifeSection /> */}
 
       {/* 12. Rich Footer */}
       <Footer />

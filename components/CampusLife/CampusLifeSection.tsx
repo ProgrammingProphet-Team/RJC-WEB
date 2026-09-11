@@ -9,7 +9,7 @@ export const CampusLifeSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100 text-[#781628] text-xs font-semibold tracking-wider uppercase mb-2 font-mono">
-              <Sparkles className="w-3.5 h-3.5" />
+              {/* <Sparkles className="w-3.5 h-3.5" /> */}
               <span>Vibrant Campus Community</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900">
@@ -32,7 +32,7 @@ export const CampusLifeSection: React.FC = () => {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute top-3 left-3 bg-[#781628] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
-                <Shield className="w-3 h-3" />
+                {/* <Shield className="w-3 h-3" /> */}
                 <span>NCC Army &amp; Navy</span>
               </div>
             </div>
@@ -58,7 +58,7 @@ export const CampusLifeSection: React.FC = () => {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute top-3 left-3 bg-emerald-800 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
-                <Sparkles className="w-3 h-3" />
+                {/* <Sparkles className="w-3 h-3" /> */}
                 <span>NSS &amp; Social Outreach</span>
               </div>
             </div>
@@ -84,7 +84,7 @@ export const CampusLifeSection: React.FC = () => {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute top-3 left-3 bg-purple-800 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
-                <Music className="w-3 h-3" />
+                {/* <Music className="w-3 h-3" /> */}
                 <span>Jhunjhunwala Utsav</span>
               </div>
             </div>
@@ -110,7 +110,7 @@ export const CampusLifeSection: React.FC = () => {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute top-3 left-3 bg-blue-800 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
-                <Library className="w-3 h-3" />
+                {/* <Library className="w-3 h-3" /> */}
                 <span>Central Knowledge Hub</span>
               </div>
             </div>

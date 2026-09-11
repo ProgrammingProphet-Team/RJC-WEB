@@ -40,7 +40,8 @@ export const MainHeader: React.FC = () => {
                 Empowered Autonomous
               </span>
               <span className="text-[11px] sm:text-xs text-slate-600 font-medium hidden sm:inline">
-                NAAC Re-Accredited &apos;A&apos; Grade | ESTD. 1963 | Affiliated to University of Mumbai
+                NAAC Re-Accredited &apos;A&apos; Grade | ESTD. 1963 
+                {/* | Affiliated to University of Mumbai */}
               </span>
             </div>
           </div>

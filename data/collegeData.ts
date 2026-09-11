@@ -121,7 +121,7 @@ export const statisticsData: StatItem[] = [
   },
   {
     id: "students",
-    value: "10,000+",
+    value: "1,00,000+",
     label: "Students",
     iconName: "Users",
   },

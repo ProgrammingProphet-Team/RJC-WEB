@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { ScrollToTop } from "@/components/Common/ScrollToTop";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -50,6 +51,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col bg-white text-slate-800 font-sans selection:bg-[#781628] selection:text-white">
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

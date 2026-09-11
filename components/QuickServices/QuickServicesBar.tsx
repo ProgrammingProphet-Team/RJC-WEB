@@ -45,7 +45,7 @@ export const QuickServicesBar: React.FC<QuickServicesBarProps> = ({
   };
 
   return (
-    <section className="bg-slate-50/80 border-y border-slate-200 py-6">
+    <section className="  py-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4">
           {quickServicesData.map((item) => (
@@ -53,7 +53,7 @@ export const QuickServicesBar: React.FC<QuickServicesBarProps> = ({
               key={item.id}
               href={item.href}
               onClick={() => onServiceClick && onServiceClick(item.id)}
-              className="flex flex-col items-center justify-center p-3.5 rounded-xl bg-white border border-slate-200/70 hover:border-rose-300 hover:shadow-md transition-all group hover:-translate-y-1 text-center cursor-pointer"
+              className="flex flex-col items-center justify-center p-3.5 rounded-xl bg-white border border-slate-200/70 hover:border-rose-900 hover:shadow-md transition-all group hover:-translate-y-1 text-center cursor-pointer"
             >
               <div className="p-2.5 rounded-full bg-rose-50 group-hover:bg-[#781628] transition-colors mb-2">
                 {renderIcon(item.iconName)}

@@ -27,7 +27,7 @@ export const AcademicPrograms: React.FC<AcademicProgramsProps> = ({
   onViewAllPrograms,
 }) => {
   return (
-    <section id="academics" className="py-16 sm:py-20 bg-rose-200/30 border-t border-slate-100">
+    <section id="academics" className="py-16 sm:py-20 bg-rose-100/30 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
@@ -44,10 +44,10 @@ export const AcademicPrograms: React.FC<AcademicProgramsProps> = ({
           <div>
             <button
               onClick={onViewAllPrograms}
-              className="inline-flex items-center space-x-2 border border-slate-300 hover:border-[#781628] hover:bg-white text-slate-700 hover:text-[#781628] px-5 py-2 rounded-md font-semibold text-xs md:text-sm tracking-wide transition-all shadow-xs active:scale-95 cursor-pointer group"
+              className="inline-flex items-center bg-rose-900 text-white space-x-2 border border-slate-300  hover:bg-rose-800 hover:text-white px-5 py-2 rounded-md font-semibold text-xs md:text-sm tracking-wide transition-all shadow-xs active:scale-95 cursor-pointer group"
             >
               <span>View All Programs</span>
-              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              {/* <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" /> */}
             </button>
           </div>
         </div>

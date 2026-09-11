@@ -4,53 +4,81 @@ import {
   MapPin,
   Phone,
   Mail,
-  ArrowUp,
-  Heart,
-  Globe,
-  Share2,
 } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
     // #420a14
-    <footer id="contact" className="bg-rose-950 text-white pt-14 pb-8 border-t-4 border-[#781628]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-8 border-b border-rose-900/50">
-          {/* Col 1: Brand & Logo (lg:col-span-5) */}
-          <div className="lg:col-span-5 flex items-start space-x-4">
-            <div className="relative w-16 h-16 sm:w-18 sm:h-18 shrink-0 bg-white p-2 rounded-xl border border-white/20 backdrop-blur-xs">
-              <Image
-                src="/assets/rjc-logo.png"
-                alt="Ramniranjan Jhunjhunwala College Seal"
-                fill
-                className="object-contain p-1"
-              />
+    // border-t-4 border-[#781628]
+    <footer id="contact" className="bg-[#420A14] text-white pt-14 pb-8 relative overflow-hidden">
+      {/* RJC Forever Signature Background */}
+      {/* <div className="absolute right-4 md:right-12 top-10 md:top-20 opacity-20 pointer-events-none select-none transform -rotate-12 origin-right">
+        <div 
+          style={{ fontFamily: '"Dancing Script", "Great Vibes", "Caveat", cursive' }} 
+          className="text-6xl md:text-[100px] font-bold text-white whitespace-nowrap leading-none flex flex-col items-end"
+        >
+          <span>RJC</span>
+          <span className="relative inline-block border-b-4 md:border-b-8 border-white pb-2 rounded-lg">
+            Forever
+          </span>
+        </div>
+      </div> */}
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-10 pb-8 border-b border-rose-900/50">
+          {/* Col 1: Brand & Logo */}
+          <div className="lg:col-span-5 xl:col-span-6 flex flex-col space-y-6">
+            <div className="flex items-start space-x-4">
+              <div className="relative w-16 h-16 sm:w-18 sm:h-18 shrink-0 bg-white p-2 rounded-xl border border-white/20 backdrop-blur-xs">
+                <Image
+                  src="/assets/rjc-logo.png"
+                  alt="Ramniranjan Jhunjhunwala College Seal"
+                  fill
+                  className="object-contain p-1"
+                />
+              </div>
+              <div>
+                <div className="text-xs lg:text-sm text-rose-200/90 font-medium">
+                  Hindi Vidya Prachar Samiti&apos;s
+                </div>
+                <h3 className="font-serif font-bold text-base sm:text-lg lg:text-xl text-white leading-tight uppercase mt-0.5">
+                  Ramniranjan Jhunjhunwala College
+                </h3>
+                <div className="font-serif font-semibold text-xs sm:text-sm lg:text-base text-rose-200 uppercase">
+                  Of Arts, Science &amp; Commerce
+                </div>
+                <div className="mt-1 text-[11px] lg:text-xs font-bold text-rose-300 uppercase tracking-wider">
+                  (Empowered Autonomous)
+                </div>
+              </div>
             </div>
-            <div>
-              <div className="text-xs text-rose-200/90 font-medium">
-                Hindi Vidya Prachar Samiti&apos;s
-              </div>
-              <h3 className="font-serif font-bold text-base sm:text-lg text-white leading-tight uppercase mt-0.5">
-                Ramniranjan Jhunjhunwala College
-              </h3>
-              <div className="font-serif font-semibold text-xs sm:text-sm text-rose-200 uppercase">
-                Of Arts, Science &amp; Commerce
-              </div>
-              <div className="mt-1 text-[11px] font-bold text-rose-300 uppercase tracking-wider">
-                (Empowered Autonomous)
-              </div>
-              <p className="text-xs text-rose-100 mt-3 leading-relaxed max-w-sm">
-                Committed to delivering holistic, value-based education and transformative research under University of Mumbai.
-              </p>
+            
+            {/* Social Icons */}
+            <div className="flex items-center space-x-3 pt-2">
+              <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#781628] transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px] text-white group-hover:scale-110 transition-transform"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#781628] transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px] text-white group-hover:scale-110 transition-transform"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="#" aria-label="Twitter" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#781628] transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px] text-white group-hover:scale-110 transition-transform"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#781628] transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px] text-white group-hover:scale-110 transition-transform"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="#" aria-label="YouTube" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#781628] transition-colors group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px] text-white group-hover:scale-110 transition-transform"><path d="M2.5 7.1C2.5 7.1 2 9.5 2 12c0 2.5.5 4.9.5 4.9.3 1.6 1.6 2.9 3.2 3.2C8.2 20.5 12 20.5 12 20.5s3.8 0 6.3-.4c1.6-.3 2.9-1.6 3.2-3.2.5-.5.5-2.9.5-2.9C22 11.5 21.5 9.1 21.5 9.1c-.3-1.6-1.6-2.9-3.2-3.2C15.8 5.5 12 5.5 12 5.5s-3.8 0-6.3.4C4.1 6.2 2.8 7.5 2.5 7.1z"/><path d="M9.75 15.02l5.75-3.27-5.75-3.27v6.54z"/></svg>
+              </a>
             </div>
           </div>
 
-          {/* Col 2: Quick Links (lg:col-span-2) */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider border-b border-rose-800 pb-2 inline-block">
+          {/* Col 2: Quick Links */}
+          <div className="lg:col-span-3 xl:col-span-2 space-y-3">
+            <h4 className="font-serif font-bold text-sm lg:text-base text-white uppercase tracking-wider border-b border-rose-800 pb-2 inline-block">
               Quick Links
             </h4>
-            <ul className="space-y-2 text-xs text-rose-100 font-medium">
+            <ul className="space-y-2 text-xs lg:text-sm text-rose-100 font-medium">
               <li>
                 <a href="#about" className="hover:text-white hover:underline transition-colors">
                   About Us
@@ -84,26 +112,26 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Col 3: Get in Touch (lg:col-span-3) */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider border-b border-rose-800 pb-2 inline-block">
+          {/* Col 3: Get in Touch */}
+          <div className="lg:col-span-4 xl:col-span-4 space-y-3">
+            <h4 className="font-serif font-bold text-sm lg:text-base text-white uppercase tracking-wider border-b border-rose-800 pb-2 inline-block">
               Get in Touch
             </h4>
-            <div className="space-y-2.5 text-xs text-rose-100 font-normal">
+            <div className="space-y-2.5 text-xs lg:text-sm text-rose-100 font-normal">
               <div className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-rose-100 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-rose-100 shrink-0 mt-0.5" />
                 <span>
                   Opposite Ghatkopar Railway Station, Ghatkopar (West), Mumbai - 400086, Maharashtra, India.
                 </span>
               </div>
               <div className="flex items-center space-x-2.5">
-                <Phone className="w-4 h-4 text-rose-100 shrink-0" />
+                <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-rose-100 shrink-0" />
                 <a href="tel:+912225152263" className="hover:text-white">
                   +91 22 2515 2263 / 2515 1763
                 </a>
               </div>
               <div className="flex items-center space-x-2.5">
-                <Mail className="w-4 h-4 text-rose-100 shrink-0" />
+                <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-rose-100 shrink-0" />
                 <a href="mailto:info@rjcollege.edu.in" className="hover:text-white">
                   info@rjcollege.edu.in
                 </a>
@@ -111,85 +139,11 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Col 4: Follow Us & Social Media (lg:col-span-2) */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider border-b border-rose-800 pb-2 inline-block">
-              Follow Us
-            </h4>
-            <p className="text-xs text-rose-100">
-              Stay connected with college events, results, and circulars.
-            </p>
-            <div className="flex items-center space-x-2 pt-1">
-              {/* Facebook */}
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#781628] flex items-center justify-center text-rose-200 hover:text-white transition-all border border-white/10"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
-              </a>
 
-              {/* Instagram */}
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#781628] flex items-center justify-center text-rose-200 hover:text-white transition-all border border-white/10"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-
-              {/* YouTube */}
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="YouTube"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#781628] flex items-center justify-center text-rose-200 hover:text-white transition-all border border-white/10"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-              </a>
-
-              {/* LinkedIn */}
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#781628] flex items-center justify-center text-rose-200 hover:text-white transition-all border border-white/10"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-              </a>
-
-              {/* X / Twitter */}
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="X (Twitter)"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#781628] flex items-center justify-center text-rose-200 hover:text-white transition-all border border-white/10"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Sub-footer */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-rose-200 gap-3">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs lg:text-sm text-rose-200 gap-3">
           <div>
             &copy; {new Date().getFullYear()} Ramniranjan Jhunjhunwala College. All rights reserved.
           </div>
