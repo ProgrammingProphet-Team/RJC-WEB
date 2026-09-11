@@ -12,12 +12,13 @@ import {
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-[#420a14] text-white pt-14 pb-8 border-t-4 border-[#781628]">
+    // #420a14
+    <footer id="contact" className="bg-rose-950 text-white pt-14 pb-8 border-t-4 border-[#781628]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-rose-900/50">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-8 border-b border-rose-900/50">
           {/* Col 1: Brand & Logo (lg:col-span-5) */}
           <div className="lg:col-span-5 flex items-start space-x-4">
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 bg-white/10 p-2 rounded-xl border border-white/20 backdrop-blur-xs">
+            <div className="relative w-16 h-16 sm:w-18 sm:h-18 shrink-0 bg-white p-2 rounded-xl border border-white/20 backdrop-blur-xs">
               <Image
                 src="/assets/rjc-logo.png"
                 alt="Ramniranjan Jhunjhunwala College Seal"
@@ -38,7 +39,7 @@ export const Footer: React.FC = () => {
               <div className="mt-1 text-[11px] font-bold text-rose-300 uppercase tracking-wider">
                 (Empowered Autonomous)
               </div>
-              <p className="text-xs text-rose-100/70 mt-3 leading-relaxed max-w-sm">
+              <p className="text-xs text-rose-100 mt-3 leading-relaxed max-w-sm">
                 Committed to delivering holistic, value-based education and transformative research under University of Mumbai.
               </p>
             </div>
@@ -49,7 +50,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider border-b border-rose-800 pb-2 inline-block">
               Quick Links
             </h4>
-            <ul className="space-y-2 text-xs text-rose-200/90 font-medium">
+            <ul className="space-y-2 text-xs text-rose-100 font-medium">
               <li>
                 <a href="#about" className="hover:text-white hover:underline transition-colors">
                   About Us
@@ -88,21 +89,21 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider border-b border-rose-800 pb-2 inline-block">
               Get in Touch
             </h4>
-            <div className="space-y-2.5 text-xs text-rose-200/90 font-normal">
+            <div className="space-y-2.5 text-xs text-rose-100 font-normal">
               <div className="flex items-start space-x-2.5">
-                <MapPin className="w-4 h-4 text-rose-300 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-rose-100 shrink-0 mt-0.5" />
                 <span>
                   Opposite Ghatkopar Railway Station, Ghatkopar (West), Mumbai - 400086, Maharashtra, India.
                 </span>
               </div>
               <div className="flex items-center space-x-2.5">
-                <Phone className="w-4 h-4 text-rose-300 shrink-0" />
+                <Phone className="w-4 h-4 text-rose-100 shrink-0" />
                 <a href="tel:+912225152263" className="hover:text-white">
                   +91 22 2515 2263 / 2515 1763
                 </a>
               </div>
               <div className="flex items-center space-x-2.5">
-                <Mail className="w-4 h-4 text-rose-300 shrink-0" />
+                <Mail className="w-4 h-4 text-rose-100 shrink-0" />
                 <a href="mailto:info@rjcollege.edu.in" className="hover:text-white">
                   info@rjcollege.edu.in
                 </a>
@@ -115,7 +116,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif font-bold text-sm text-white uppercase tracking-wider border-b border-rose-800 pb-2 inline-block">
               Follow Us
             </h4>
-            <p className="text-xs text-rose-200/70">
+            <p className="text-xs text-rose-100">
               Stay connected with college events, results, and circulars.
             </p>
             <div className="flex items-center space-x-2 pt-1">
@@ -188,7 +189,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Sub-footer */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-rose-200/70 gap-3">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-rose-200 gap-3">
           <div>
             &copy; {new Date().getFullYear()} Ramniranjan Jhunjhunwala College. All rights reserved.
           </div>
@@ -196,8 +197,8 @@ export const Footer: React.FC = () => {
             <a href="#" className="hover:text-white transition-colors">Disclaimers</a>
             <span>|</span>
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <span>|</span>
-            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+            {/* <span>|</span> */}
+            {/* <a href="#" className="hover:text-white transition-colors">Sitemap</a> */}
           </div>
         </div>
       </div>

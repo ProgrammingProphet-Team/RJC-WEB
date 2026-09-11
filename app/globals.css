@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --font-serif: var(--font-playfair), "Georgia", "Cambria", "serif", "Arial";
-  --font-sans: var(--font-jakarta), var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-serif: "Arial", sans-serif;
+  --font-sans: "Arial", sans-serif;
   
   --rjc-maroon: #781628;
   --rjc-maroon-dark: #520d1b;
@@ -27,6 +27,10 @@ body {
 
 .font-serif {
   font-family: var(--font-serif);
+}
+
+.font-mainheader {
+  font-family: var(--font-playfair), "Georgia", "Cambria", "serif";
 }
 
 /* Custom Scrollbar */

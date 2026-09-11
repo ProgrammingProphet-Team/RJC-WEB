@@ -24,6 +24,7 @@ export interface ProgramStream {
   title: string;
   theme: "arts" | "science" | "commerce" | "sfc";
   description: string;
+  image: string;
   iconName: string;
   colorClass: string;
   lightBgClass: string;
@@ -91,8 +92,8 @@ export const heroSlidesData: HeroSlide[] = [
     titlePrimary: "Academic",
     titleSecondary: "Excellence",
     description: "Empowered Autonomous Institution affiliated to the prestigious University of Mumbai.",
-    image: "/assets/home/college-infra-2.png",
-    ctaPrimaryText: "Admissions 2025-26",
+    image: "/assets/ncc/hero-bg.png",
+    ctaPrimaryText: "Admissions 2026-27",
     ctaPrimaryHref: "#admissions",
     ctaSecondaryText: "View Accreditations",
     ctaSecondaryHref: "#about",
@@ -156,6 +157,7 @@ export const academicProgramsData: ProgramStream[] = [
     title: "Arts",
     theme: "arts",
     description: "Explore programs in Humanities and Social Sciences",
+    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=400",
     iconName: "GraduationCap",
     colorClass: "text-[#781628]",
     lightBgClass: "bg-rose-50/70 hover:bg-rose-50 border-rose-100",
@@ -176,6 +178,7 @@ export const academicProgramsData: ProgramStream[] = [
     title: "Science",
     theme: "science",
     description: "Building scientific temperament for a brighter future",
+    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400",
     iconName: "FlaskConical",
     colorClass: "text-blue-700",
     lightBgClass: "bg-blue-50/60 hover:bg-blue-50 border-blue-100",
@@ -196,6 +199,7 @@ export const academicProgramsData: ProgramStream[] = [
     title: "Commerce",
     theme: "commerce",
     description: "Excellence in Commerce and Management Education",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400",
     iconName: "BarChart3",
     colorClass: "text-emerald-700",
     lightBgClass: "bg-emerald-50/60 hover:bg-emerald-50 border-emerald-100",
@@ -215,6 +219,7 @@ export const academicProgramsData: ProgramStream[] = [
     title: "Self-Financing Courses",
     theme: "sfc",
     description: "Industry-relevant programs for the next generation",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400",
     iconName: "Users",
     colorClass: "text-amber-800",
     lightBgClass: "bg-amber-50/60 hover:bg-amber-50 border-amber-100",

@@ -38,7 +38,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
 
   return (
     <div
-      className="relative w-full h-[480px] sm:h-[540px] md:h-[600px] lg:h-[640px] overflow-hidden bg-slate-900 select-none"
+      className="relative w-full h-[480px] sm:h-[600px] md:h-[640px] lg:h-[700px] overflow-hidden bg-slate-900 select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -67,10 +67,10 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
 
       {/* Hero Content Container */}
       <div className="relative z-20 max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-        <div className="max-w-2xl py-8">
+        <div className="max-w-3xl py-8">
           {/* Subtitle Tagline */}
           <div className="inline-flex items-center gap-2 mb-3 sm:mb-4 animate-fade-in">
-            <span className="text-[11px] sm:text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-rose-200/90 font-mono">
+            <span className="text-[11px] sm:text-xs md:text-sm font-semibold tracking-[0.2em] uppercase text-slate-200/90 font-mono">
               {currentSlide.tagline}
             </span>
           </div>
@@ -78,7 +78,8 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
           {/* Main Display Heading */}
           <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[68px] font-bold text-white tracking-tight leading-[1.08] mb-4 sm:mb-6 animate-fade-in">
             <span>{currentSlide.titlePrimary} </span>
-            <span className="text-[#f48fb1]  font-arial font-medium">
+            <span className=" text-rose-300  font-arial ">
+              {/* text-rose-400  */}
               {currentSlide.titleSecondary}
             </span>
           </h2>
@@ -93,7 +94,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
             <a
               href={currentSlide.ctaPrimaryHref}
               onClick={onAboutClick}
-              className="inline-flex items-center space-x-2 bg-[#781628] hover:bg-[#631120] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-md font-semibold text-xs sm:text-sm transition-all shadow-lg hover:shadow-rose-900/30 active:scale-95 group cursor-pointer border border-rose-500/20"
+              className="inline-flex items-center space-x-2 bg-rose-900 hover:bg-rose-800 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-md font-semibold text-xs sm:text-sm transition-all shadow-lg hover:shadow-rose-900/30 active:scale-95 group cursor-pointer border border-rose-500/20"
             >
               <span>{currentSlide.ctaPrimaryText}</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -102,7 +103,8 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
             <a
               href={currentSlide.ctaSecondaryHref}
               onClick={onExplorePrograms}
-              className="inline-flex items-center space-x-2 bg-black/40 hover:bg-black/60 text-white backdrop-blur-md px-5 sm:px-6 py-2.5 sm:py-3 rounded-md font-semibold text-xs sm:text-sm transition-all border border-white/30 hover:border-white/60 active:scale-95 cursor-pointer"
+              // bg-black/40 hover:bg-black/60
+              className="inline-flex items-center space-x-2  bg-black/10 hover:bg-black/20 text-white backdrop-blur-md px-5 sm:px-6 py-2.5 sm:py-3 rounded-md font-semibold text-xs sm:text-sm transition-all border border-slate-200 hover:border-slate-100 active:scale-95 cursor-pointer"
             >
               <span>{currentSlide.ctaSecondaryText}</span>
             </a>
@@ -119,7 +121,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
       </div> */}
 
       {/* Carousel Bottom Control Bar: ← 01 / 03 → */}
-      <div className="absolute right-4 sm:right-8 lg:right-16 bottom-6 sm:bottom-10 z-20 flex items-center space-x-3 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-white shadow-xl">
+      <div className="absolute right-4 sm:right-8 lg:right-16 bottom-6 sm:bottom-10 z-20 flex items-center space-x-3 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border-2 border-white text-white shadow-xl">
         <button
           onClick={handlePrev}
           aria-label="Previous Slide"

@@ -104,7 +104,7 @@ export default function Home() {
       />
 
       {/* 5. Key Statistics Strip */}
-      <StatsStrip />
+      {/* <StatsStrip /> */}
 
       {/* 6. About Section (About RJC + Vision, Mission, Values + Life at RJC Video Card) */}
       <AboutSection

@@ -40,14 +40,14 @@ export const Navigation: React.FC<NavigationProps> = ({
   return (
     <nav
       ref={navRef}
-      className={`bg-white border-y border-slate-200 sticky top-0 z-40 transition-all duration-200 ${
-        isScrolled ? "shadow-md py-0" : ""
-      }`}
+      //  border-y border-rose-900
+      className={`bg-rose-900  sticky top-0 z-40 transition-all duration-200 ${isScrolled ? "shadow-md py-0" : ""
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-12 sm:h-13">
           {/* Desktop Navigation Items */}
-          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+          <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 text-slate-100">
             {navigationLinks.map((item) => {
               const hasChildren = item.children && item.children.length > 0;
               const isHome = item.title === "Home";
@@ -63,18 +63,16 @@ export const Navigation: React.FC<NavigationProps> = ({
                   <a
                     href={item.href}
                     onClick={() => handleLinkClick(item)}
-                    className={`flex items-center uppercase space-x-1 px-2.5 py-3.5 text-[13px] font-semibold tracking-normal transition-colors relative ${
-                      isHome
-                        ? "text-[#781628] font-bold"
-                        : "text-slate-700 hover:text-[#781628]"
-                    }`}
+                    className={`flex items-center font-semibold space-x-1 px-2 py-3.5 text-[15px]  tracking-normal transition-colors relative ${isHome
+                      ? "text-[#781628] font-bold"
+                      : "text-slate-100"
+                      }`}
                   >
                     <span>{item.title}</span>
                     {hasChildren && (
                       <ChevronDown
-                        className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:text-[#781628] ${
-                          isOpen ? "rotate-180 text-[#781628]" : ""
-                        }`}
+                        className={`w-3.5 h-3.5  transition-transform duration-200  ${isOpen ? "rotate-180" : ""
+                          }`}
                       />
                     )}
                     {/* Active Bottom Underline indicator */}
@@ -85,27 +83,27 @@ export const Navigation: React.FC<NavigationProps> = ({
 
                   {/* Dropdown Menu */}
                   {hasChildren && isOpen && (
-                    <div className="absolute left-0 top-full w-72 bg-white rounded-b-lg shadow-xl border border-slate-100 py-2 animate-fade-in z-50">
-                      <div className="px-3 py-1.5 mb-1 border-b border-slate-100 bg-slate-50/70 text-[11px] font-bold text-[#781628] uppercase tracking-wider flex items-center gap-1.5">
+                    <div className="absolute left-0 top-full w-72 bg-white rounded-b-lg shadow-xl border border-slate-100 animate-fade-in z-50 mt-0.5">
+                      {/* <div className="px-3 py-1.5 mb-1 border-b border-slate-100 bg-slate-50/70 text-[11px] font-bold text-[#781628] uppercase tracking-wider flex items-center gap-1.5">
                         <Sparkles className="w-3 h-3 text-[#781628]" />
                         <span>{item.title} Overview</span>
-                      </div>
-                      <div className="max-h-[380px] overflow-y-auto py-1">
+                      </div> */}
+                      <div className="max-h-[380px] overflow-y-auto  ">
                         {item.children?.map((subItem) => (
                           <a
                             key={subItem.title}
                             href={subItem.href}
-                            className="block px-3.5 py-2 hover:bg-rose-50/60 transition-colors group/item"
+                            className="block px-3.5 py-2.5 hover:bg-rose-200/60 transition-colors group/item border-t border-slate-100"
                           >
-                            <div className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#781628] flex items-center justify-between">
+                            <div className="text-[15px] font-semibold text-slate-800 group-hover/item:text-[#781628] flex items-center justify-between">
                               <span>{subItem.title}</span>
-                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-[#781628]" />
+                              <ArrowRight className="w-4 h-4 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-[#781628]" />
                             </div>
-                            {subItem.description && (
+                            {/* {subItem.description && (
                               <div className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">
                                 {subItem.description}
                               </div>
-                            )}
+                            )} */}
                           </a>
                         ))}
                       </div>
@@ -158,9 +156,8 @@ export const Navigation: React.FC<NavigationProps> = ({
                         className="p-1.5 text-slate-500 hover:text-[#781628]"
                       >
                         <ChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            isExpanded ? "rotate-180 text-[#781628]" : ""
-                          }`}
+                          className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? "rotate-180 text-[#781628]" : ""
+                            }`}
                         />
                       </button>
                     )}

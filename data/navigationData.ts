@@ -10,10 +10,10 @@ export interface NavItem {
 }
 
 export const navigationLinks: NavItem[] = [
-  {
-    title: "Home",
-    href: "#",
-  },
+  // {
+  //   title: "Home",
+  //   href: "#",
+  // },
   {
     title: "About Us",
     href: "#about",
@@ -111,8 +111,8 @@ export const navigationLinks: NavItem[] = [
       { title: "Training & Placement Cell", description: "Career counselling, internships, campus drives", href: "#" },
     ],
   },
-  {
-    title: "Contact Us",
-    href: "#contact",
-  },
+  // {
+  //   title: "Contact Us",
+  //   href: "#contact",
+  // },
 ];
