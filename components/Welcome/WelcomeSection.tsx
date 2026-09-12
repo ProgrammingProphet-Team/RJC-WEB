@@ -34,7 +34,7 @@ export const WelcomeSection: React.FC = () => {
             </div>
             <div className="relative w-full h-[350px] sm:h-[360px] rounded-xl overflow-hidden shadow-lg border border-slate-100">
               <Image
-                src="/assets/home/college-infra.png"
+                src="/assets/home/hero-1.png"
                 alt="Students at Ramniranjan Jhunjhunwala College"
                 fill
                 className="object-cover"

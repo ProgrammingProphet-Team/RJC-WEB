@@ -26,7 +26,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/hero-clip/campus-new.mp4" type="video/mp4" />
+          <source src="/hero-clip/" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Cinematic Gradient Overlays to match the design's dark left tint and rich clarity */}

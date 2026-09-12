@@ -44,7 +44,7 @@ export const Navigation: React.FC<NavigationProps> = ({
       className={`bg-rose-900  sticky top-0 z-40 transition-all duration-200 ${isScrolled ? "shadow-md py-0" : ""
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
         <div className="flex items-center justify-between h-12 sm:h-13">
           {/* Desktop Navigation Items */}
           <div className="hidden lg:flex items-center space-x-1 xl:space-x-2 text-slate-100">
@@ -97,7 +97,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                           >
                             <div className="text-[15px] font-semibold text-slate-800 group-hover/item:text-[#781628] flex items-center justify-between">
                               <span>{subItem.title}</span>
-                              <ArrowRight className="w-4 h-4 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-[#781628]" />
+                              {/* <ArrowRight className="w-4 h-4 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all text-[#781628]" /> */}
                             </div>
                             {/* {subItem.description && (
                               <div className="text-[11px] text-slate-500 line-clamp-1 mt-0.5">

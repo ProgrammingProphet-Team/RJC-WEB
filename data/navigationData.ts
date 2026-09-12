@@ -15,7 +15,7 @@ export const navigationLinks: NavItem[] = [
   //   href: "#",
   // },
   {
-    title: "About Us",
+    title: "About",
     href: "#about",
     children: [
       { title: "About Hindi Vidya Prachar Samiti", description: "The founding trust since 1938", href: "#about" },
@@ -25,6 +25,18 @@ export const navigationLinks: NavItem[] = [
       { title: "Autonomy Status", description: "Empowered Autonomous since 2018", href: "#about" },
       { title: "Code of Conduct & Ethics", description: "Values guiding our academic community", href: "#" },
       { title: "Statutory Committees", description: "Academic Council, BoS, Finance Committee", href: "#" },
+    ],
+  },
+  {
+    title: "Admissions",
+    href: "#admissions",
+    children: [
+      { title: "Admission Guidelines 2025-26", description: "Step-by-step application instructions", href: "#admissions" },
+      { title: "Eligibility Criteria & Merit Cutoffs", description: "Course-wise minimum requirements", href: "#admissions" },
+      { title: "Online Registration Portal", description: "Apply online for FY & PG admissions", href: "#admissions" },
+      { title: "Prospectus & Fee Structure", description: "Download institutional prospectus", href: "#admissions" },
+      { title: "Scholarships & Financial Aid", description: "Government and Trust scholarships", href: "#" },
+      { title: "Admissions Helpdesk & FAQ", description: "Direct contact for admission queries", href: "#" },
     ],
   },
   {
@@ -41,17 +53,14 @@ export const navigationLinks: NavItem[] = [
     ],
   },
   {
-    title: "Admissions",
-    href: "#admissions",
+    title: "Faculty",
+    href: "#faculty",
     children: [
-      { title: "Admission Guidelines 2025-26", description: "Step-by-step application instructions", href: "#admissions" },
-      { title: "Eligibility Criteria & Merit Cutoffs", description: "Course-wise minimum requirements", href: "#admissions" },
-      { title: "Online Registration Portal", description: "Apply online for FY & PG admissions", href: "#admissions" },
-      { title: "Prospectus & Fee Structure", description: "Download institutional prospectus", href: "#admissions" },
-      { title: "Scholarships & Financial Aid", description: "Government and Trust scholarships", href: "#" },
-      { title: "Admissions Helpdesk & FAQ", description: "Direct contact for admission queries", href: "#" },
+      { title: "Faculty List", description: "List of all faculty members", href: "#faculty" },
+      { title: "Faculty Profiles", description: "Detailed profiles of faculty members", href: "#faculty" },
     ],
   },
+
   {
     title: "Student Corner",
     href: "#",
@@ -75,18 +84,18 @@ export const navigationLinks: NavItem[] = [
       { title: "Patents & Intellectual Property (IPR)", description: "Innovations and commercialization", href: "#" },
     ],
   },
-  {
-    title: "IQAC",
-    href: "#",
-    children: [
-      { title: "About IQAC", description: "Internal Quality Assurance Cell mandate", href: "#" },
-      { title: "NAAC Accreditation & SSR", description: "NAAC 'A' Grade certificates and reports", href: "#" },
-      { title: "AQAR Reports", description: "Annual Quality Assurance Reports", href: "#" },
-      { title: "NIRF Data", description: "National Institutional Ranking Framework submissions", href: "#" },
-      { title: "Academic & Administrative Audits", description: "Quality assessment records", href: "#" },
-      { title: "Best Practices & Distinctiveness", description: "Institutional benchmarks in holistic learning", href: "#" },
-    ],
-  },
+  // {
+  //   title: "IQAC",
+  //   href: "#",
+  //   children: [
+  //     { title: "About IQAC", description: "Internal Quality Assurance Cell mandate", href: "#" },
+  //     { title: "NAAC Accreditation & SSR", description: "NAAC 'A' Grade certificates and reports", href: "#" },
+  //     { title: "AQAR Reports", description: "Annual Quality Assurance Reports", href: "#" },
+  //     { title: "NIRF Data", description: "National Institutional Ranking Framework submissions", href: "#" },
+  //     { title: "Academic & Administrative Audits", description: "Quality assessment records", href: "#" },
+  //     { title: "Best Practices & Distinctiveness", description: "Institutional benchmarks in holistic learning", href: "#" },
+  //   ],
+  // },
   {
     title: "Examination",
     href: "#",
@@ -111,6 +120,27 @@ export const navigationLinks: NavItem[] = [
       { title: "Training & Placement Cell", description: "Career counselling, internships, campus drives", href: "#" },
     ],
   },
+  {
+    title: "Placement",
+    href: "#",
+    children: [
+      { title: "Placement", description: "Career counselling, internships, campus drives", href: "#" },
+    ]
+  },
+  {
+    title: "Alumni",
+    href: "#",
+    children: [
+      { title: "Alumni", description: "Career counselling, internships, campus drives", href: "#" },
+    ]
+  },
+  {
+    title: "Events",
+    href: "#",
+    children: [
+      { title: "Events", description: "Career counselling, internships, campus drives", href: "#" },
+    ]
+  }
   // {
   //   title: "Contact Us",
   //   href: "#contact",

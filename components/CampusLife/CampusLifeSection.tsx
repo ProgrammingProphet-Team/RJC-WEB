@@ -31,10 +31,10 @@ export const CampusLifeSection: React.FC = () => {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute top-3 left-3 bg-[#781628] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
-                {/* <Shield className="w-3 h-3" /> */}
+              {/* <div className="absolute top-3 left-3 bg-[#781628] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                <Shield className="w-3 h-3" />
                 <span>NCC Army &amp; Navy</span>
-              </div>
+              </div> */}
             </div>
             <div className="p-5 flex-1 flex flex-col justify-between">
               <div>
@@ -57,10 +57,10 @@ export const CampusLifeSection: React.FC = () => {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute top-3 left-3 bg-emerald-800 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
-                {/* <Sparkles className="w-3 h-3" /> */}
+              {/* <div className="absolute top-3 left-3 bg-emerald-800 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                <Sparkles className="w-3 h-3" />
                 <span>NSS &amp; Social Outreach</span>
-              </div>
+              </div> */}
             </div>
             <div className="p-5 flex-1 flex flex-col justify-between">
               <div>
@@ -78,15 +78,15 @@ export const CampusLifeSection: React.FC = () => {
           <div className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
             <div className="relative h-48 overflow-hidden">
               <Image
-                src="/assets/home/college-infra.png"
+                src="/assets/home/event.png"
                 alt="Jhunjhunwala Utsav Cultural Fest"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute top-3 left-3 bg-purple-800 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
-                {/* <Music className="w-3 h-3" /> */}
+              {/* <div className="absolute top-3 left-3 bg-purple-800 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                <Music className="w-3 h-3" />
                 <span>Jhunjhunwala Utsav</span>
-              </div>
+              </div> */}
             </div>
             <div className="p-5 flex-1 flex flex-col justify-between">
               <div>
@@ -104,15 +104,15 @@ export const CampusLifeSection: React.FC = () => {
           <div className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
             <div className="relative h-48 overflow-hidden">
               <Image
-                src="/assets/home/college-infra-2.png"
+                src="/assets/home/library.png"
                 alt="Central Library RJ College"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute top-3 left-3 bg-blue-800 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
-                {/* <Library className="w-3 h-3" /> */}
+              {/* <div className="absolute top-3 left-3 bg-blue-800 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                <Library className="w-3 h-3" />
                 <span>Central Knowledge Hub</span>
-              </div>
+              </div> */}
             </div>
             <div className="p-5 flex-1 flex flex-col justify-between">
               <div>

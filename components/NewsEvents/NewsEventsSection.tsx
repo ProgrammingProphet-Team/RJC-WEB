@@ -9,6 +9,7 @@ import {
   ExternalLink,
   Sparkles,
   Rocket,
+  GraduationCap,
 } from "lucide-react";
 import {
   announcementsData,
@@ -152,8 +153,8 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
 
               {/* Content */}
               <div className="relative z-10 space-y-4 lg:space-y-6">
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 lg:px-3 lg:py-1.5 rounded-full bg-white/10 backdrop-blur-md text-[10px] lg:text-xs font-mono tracking-widest text-rose-200 uppercase">
-                  <Rocket className="w-3 h-3 lg:w-4 lg:h-4 text-rose-300" />
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 lg:px-3 lg:py-1.5 rounded-full bg-white/10 backdrop-blur-md text-[10px] lg:text-xs font-mono tracking-widest text-rose-100 uppercase">
+                  <GraduationCap className="w-3 h-3 lg:w-4 lg:h-4 text-rose-100" />
                   <span>Admissions Open</span>
                 </div>
 
