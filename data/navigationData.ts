@@ -31,7 +31,7 @@ export const navigationLinks: NavItem[] = [
     title: "Admissions",
     href: "#admissions",
     children: [
-      { title: "Admission Guidelines 2025-26", description: "Step-by-step application instructions", href: "#admissions" },
+      { title: "Admission Guidelines 2026-27", description: "Step-by-step application instructions", href: "#admissions" },
       { title: "Eligibility Criteria & Merit Cutoffs", description: "Course-wise minimum requirements", href: "#admissions" },
       { title: "Online Registration Portal", description: "Apply online for FY & PG admissions", href: "#admissions" },
       { title: "Prospectus & Fee Structure", description: "Download institutional prospectus", href: "#admissions" },

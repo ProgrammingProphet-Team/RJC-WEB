@@ -38,7 +38,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
 
   return (
     <div
-      className="relative w-full h-[480px] sm:h-[600px] md:h-[640px] lg:h-[700px] overflow-hidden bg-slate-900 select-none"
+      className="relative w-full h-[480px] sm:h-[600px] md:h-[640px] lg:h-[740px] overflow-hidden bg-slate-900 select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
