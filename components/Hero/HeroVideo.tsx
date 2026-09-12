@@ -16,7 +16,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({
   const currentSlide = heroSlidesData[0]; // Using the first slide's data for the text
 
   return (
-    <div className="relative w-full h-[480px] sm:h-[600px] md:h-[640px] lg:h-[730px] overflow-hidden bg-slate-900 select-none">
+    <div className="relative w-full h-[480px] sm:h-[600px] md:h-[640px] lg:h-[680px] overflow-hidden bg-slate-900 select-none">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
